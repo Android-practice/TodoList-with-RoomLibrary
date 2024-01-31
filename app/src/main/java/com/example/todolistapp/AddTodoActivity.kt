@@ -1,11 +1,9 @@
 package com.example.todolistapp
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.todolistapp.databinding.ActivityAddTodoBinding
-import com.example.todolistapp.databinding.ActivityMainBinding
 import com.example.todolistapp.db.AppDatabase
 import com.example.todolistapp.db.TodoDao
 import com.example.todolistapp.db.TodoEntity
