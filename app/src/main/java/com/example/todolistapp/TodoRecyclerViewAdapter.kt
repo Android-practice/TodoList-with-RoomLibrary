@@ -15,15 +15,20 @@ class TodoRecyclerViewAdapter(private val todoList: ArrayList<TodoEntity>) : Rec
         val root = binding.root
     }
 
+    //RecyclerView Adapter 구현해야하는 3개의 멤버
+
+    //뷰 홀더를 생성함
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val binding : ItemTodoBinding = ItemTodoBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return MyViewHolder(binding)
     }
 
+    //아이템리스트의 사이즈를 반환
     override fun getItemCount(): Int {
         return todoList.size
     }
 
+    //뷰에 값을 바인딩
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val todoData = todoList[position]
 
