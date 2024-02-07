@@ -9,7 +9,7 @@ import androidx.room.Query
 interface TodoDao {
 
     //get all
-    @Query("SELECT * FROM TodoEntity")
+    @Query("SELECT * FROM TodoEntity ORDER BY importance") //중요도 순으로 정렬 
     fun getAllTodo():List<TodoEntity>
 
     //insert todo
