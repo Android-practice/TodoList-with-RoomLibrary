@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         Thread{ //db접근 관련 작업은 백그라운드 스레드에서 진행
             todoList = ArrayList(todoDao.getAllTodo())
             setRecyclerView() //해당 함수는 메인 스레드에서 실행되어야 하는데... but thread내에서 실행되고 있음
-        }
+        }.start()
     }
 
     //뷰 리소스에 접근하므로 메인 스레드에서 실행되어야함
